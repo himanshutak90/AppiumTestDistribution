@@ -1,0 +1,46 @@
+{
+  "android": {
+    "automationName": "UiAutomator2",
+    "newCommandTimeout": 600,
+    "launchTimeout": 90000,
+    "platformName": "Android",
+    "autoGrantPermissions": true,
+    "pCloudy_DurationInMinutes": 10,
+    "pCloudy_WildNet": "false",
+    "pCloudy_EnableVideo": "true",
+    "pCloudy_EnablePerformanceData": "true",
+    "pCloudy_EnableDeviceLogs": "true",
+    "pCloudy_ApplicationName": "pCloudy_Appium_Demo.apk",
+    "appPackage": "com.pcloudy.appiumdemo",
+    "appActivity": "com.ba.mobile.LaunchActivity"
+  },
+  "serverConfig": {
+    "server": {
+      "use-plugins": ["device-farm"],
+      "port": 31337,
+      "plugin": {
+        "device-farm": {
+          "platform": "android",
+          "cloud":
+            {
+              "cloudName": "pCloudy",
+              "url": "https://device.pcloudy.com/appiumcloud/wd/hub",
+              "devices": [
+                {
+                  "pCloudy_DeviceManufacturer": "SAMSUNG",
+                  "pCloudy_DeviceVersion": "13.0.0",
+                  "platform": "android"
+                },
+                {
+                  "pCloudy_DeviceManufacturer": "APPLE",
+                  "pCloudy_DeviceVersion": "15.1",
+                  "platform": "ios"
+                }
+              ]
+            }
+        }
+      }
+    }
+  },
+  "appiumServerPath": "./node_modules/appium/build/lib/main.js"
+}

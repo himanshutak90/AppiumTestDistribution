@@ -1,0 +1,54 @@
+{
+  "android": {
+    "automationName": "UIAutomator2",
+    "app": "bs://b2b262df44bcb0b73d734b3a7529e38fe2fcb429",
+    "noSign": true,
+    "browserstack.appium_version": "2.0.0",
+    "project": "First TestNg Android Project",
+    "build": "browserstack-1111",
+    "name": "first_test",
+    "browserstack.debug": true
+  },
+  "iOS": {
+    "platformName": "iOS",
+    "app": "bs://efba7654ed367932162a175b16910035eb284e26",
+    "deviceName": "iPhone",
+    "wdaLaunchTimeout": 80000,
+    "wdaConnectionTimeout": 80000,
+    "preventWDAAttachments": true,
+    "clearSystemFiles": true,
+    "shouldUseSingletonTestManager": false,
+    "simpleIsVisibleCheck": true,
+    "maxTypingFrequency": 10
+  },
+  "serverConfig" : {
+    "server": {
+      "use-plugins": ["device-farm"],
+      "plugin": {
+        "device-farm": {
+          "platform": "android",
+          "skipChromeDownload": true,
+          "iosDeviceType": "real",
+          "cloud":
+            {
+              "cloudName": "browserstack",
+              "url": "http://hub-cloud.browserstack.com",
+              "devices": [
+                {
+                  "deviceName": "Samsung Galaxy S22",
+                  "os_version": "12.0",
+                  "platform": "android"
+                },
+                {
+                  "deviceName": "iPhone 11 Pro",
+                  "os_version": "15",
+                  "platform": "ios"
+                }
+              ]
+            }
+        }
+      }
+    }
+  },
+  "appiumServerPath": "./node_modules/appium/build/lib/main.js"
+}
