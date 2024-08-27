@@ -10,6 +10,7 @@
     <description>A tool run Android and iOS test in parallel across devices</description>
     <url>https://github.com/saikrishna321/AppiumTestDistribution</url>
 
+         
     <licenses>
         <license>
             <name>GNU Public License version 3.0</name>
